@@ -22,3 +22,13 @@ document.getElementById("pannel4").style.display = "none";
 
 var h3list = document.getElementsByTagName("H3")[0];
  h3list.style.color = "blue";
+
+function Magic(item){
+item.style.width = "50%";
+item.style.height = "50%";
+}
+
+function MagicOut(item){
+item.style.width = "100%";
+item.style.height = "100%";
+}
