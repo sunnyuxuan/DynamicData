@@ -1,0 +1,28 @@
+a {
+
+}
+nav ul{
+   margin-left: 30px;
+    display: inline;
+}
+nav li{
+    list-style:none;
+        display: inline;
+
+    font-size:20px;
+    margin-right: 50px;
+}
+
+#title{
+color:#F28C9C;
+}
+
+#intro{
+font-size: 18px;
+}
+body{
+/*
+background-image: url(../images/bamboo.svg);
+background-repeat: repeat;
+*/
+background-color: #E6F8B2;}

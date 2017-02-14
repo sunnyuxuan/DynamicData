@@ -1,7 +1,7 @@
 'use strict';
 
 const Hapi = require('hapi');
-
+const Blipp = require('blipp');
 // Create a server with a host and port
 const server = new Hapi.Server();
 server.connection({ 
@@ -9,6 +9,7 @@ server.connection({
     host: 'localhost'
 });
 
+server.register([Blipp], () => {});
 // Add the route
 server.route({
     method: 'GET',
