@@ -1,0 +1,29 @@
+body{
+background-color: #E6F8B2;
+}
+
+
+.headbg{
+background-color: #CDE77F;
+}
+
+
+
+h1{
+font-family: 'Comfortaa', cursive;
+text-align: center;
+color: white;
+}
+
+h3,h4, h5{
+font-family: 'Nunito Sans', sans-serif;
+color:#704E2E;
+}
+
+.hint{
+color: gray;
+}
+
+.pic{
+margin-right:30px;
+}

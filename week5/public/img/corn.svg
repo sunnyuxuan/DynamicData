@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="89px" viewBox="0 0 108 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>corn</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="corn">
+            <path d="M35.5,62.5 C35.5,62.5 71,74.3299662 71,55 C71,35.6700338 55.1061086,0 35.5,0 C15.8938914,0 0,35.6700338 0,55 C0,74.3299662 35.5,62.5 35.5,62.5 Z" id="Oval-9" fill="#F8E81C"></path>
+            <path d="M71.5,84.5 C71.5,84.5 107,96.3299662 107,77 C107,57.6700338 91.1061086,22 71.5,22 C51.8938914,22 36,57.6700338 36,77 C36,96.3299662 71.5,84.5 71.5,84.5 Z" id="Oval-9-Copy" stroke="#FFFFFF" fill="#F8E81C"></path>
+            <circle id="Oval-10" fill="#FCFAE2" cx="23" cy="19" r="3"></circle>
+            <circle id="Oval-10-Copy" fill="#FCFAE2" cx="29" cy="13" r="3"></circle>
+            <circle id="Oval-10-Copy-2" fill="#FCFAE2" cx="39" cy="16" r="3"></circle>
+            <circle id="Oval-10-Copy-3" fill="#FCFAE2" cx="38" cy="7" r="3"></circle>
+            <circle id="Oval-10-Copy-4" fill="#FCFAE2" cx="45" cy="13" r="3"></circle>
+            <circle id="Oval-10-Copy-5" fill="#FCFAE2" cx="61" cy="42" r="3"></circle>
+            <circle id="Oval-10-Copy-6" fill="#FCFAE2" cx="67" cy="33" r="3"></circle>
+            <circle id="Oval-10-Copy-7" fill="#FCFAE2" cx="80" cy="36" r="3"></circle>
+            <circle id="Oval-10-Copy-8" fill="#FCFAE2" cx="74" cy="45" r="3"></circle>
+            <circle id="Oval-10-Copy-9" fill="#FCFAE2" cx="86" cy="45" r="3"></circle>
+            <circle id="Oval-10-Copy-10" fill="#FCFAE2" cx="74" cy="27" r="3"></circle>
+        </g>
+    </g>
+</svg>
