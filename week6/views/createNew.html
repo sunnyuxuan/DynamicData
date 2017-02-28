@@ -1,0 +1,148 @@
+<div id="mainForm">
+
+    <div class="container-fluid">
+        <form action="/form" method="POST">
+
+            <div class="row" id="pannel1">
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-3 col-sm-10 col-sm-offset-2 col-xs-11 col-xs-offset-1">
+                        <h3>Hello, I'm your little panda friend. What's your name, my little friend?</h3>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-2 col-xs-11 col-xs-offset-1">
+                        <h4>First name: <input type="text" name="firstname" id="firstname"></h4>
+                    </div>
+                    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-2 col-xs-11 col-xs-offset-1">
+                        <h4>Last name: <input type="text" name="lastname" id="lastname"></h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row" id="pannel2">
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-1 col-sm-1 col-md-offset-1 col-xs-11 col-xs-offset-1">
+                        <img src="img/cool.svg" alt="coolpanda" class="allpanda">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-11 col-xs-offset-1">
+                        <h3>Your is so cool!I wish I had one. Could you please create an English name for me?</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4 col-sm-10 col-sm-offset-2 col-xs-11 col-xs-offset-1">
+                        <h4><input type="text" name="pandaname" id="pandaname"></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="pannel3">
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-1 col-sm-1 col-md-offset-1 col-xs-11 col-xs-offset-1">
+                        <img src="img/pandaborn.svg" alt="pandaborn" class="allpanda">
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-11 col-xs-offset-1">
+                        <h3>I was born in a lovely day on <input type="date" name="date" id="date" min="2016-01-01" max="2016-12-31">
+   </h3>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4 col-sm-10 col-sm-offset-2 col-xs-11 col-xs-offset-1">
+                        <h5 class="hint">Hint:I am only about one years old</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="pannel4">
+                <div class="col-md-7 col-md-offset-3 col-sm-12 col-xs-12">
+                    <h3>and now I am living in
+           <select name="place" id="place">
+                <option value="Giant Panda Research Center">Giant Panda Research Center</option>
+                <option value="Nature Reserve">Nature Reserve</option>
+                <option value="Zoos abroad">Zoos abroad</option>
+            </select>
+           </h3>
+                </div>
+            </div>
+
+            <div class="row pannel">
+                <div class="col-md-2 col-sm-1 col-md-offset-1 col-xs-11 col-xs-offset-1"><img src="img/question.svg" alt="question" class="allpanda"></div>
+                
+                <div class="col-md-4 col-sm-7 col-xs-11 col-xs-offset-1">
+                    <h3>Guess, I am a boy or a girl?</h3>
+                </div>
+                  
+                  <div class="row">
+                   <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                       <h4>
+                       <input class="check" type="radio" name="gender" value="Boy" checked>
+                       <span id="checkBoy">Boy</span>               
+                       <input type="radio" name="gender" value="girl">Girl</h4>
+                </div>
+                </div>
+            </div>
+
+            <div class="row pannel">
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-1 col-sm-1 col-md-offset-1 col-xs-11 col-xs-offset-1">
+                        <img src="img/eat.svg" alt="eat" class="allpanda">
+                    </div>
+                    <div class="col-md-8 col-sm-6 col-xs-11 col-xs-offset-1">
+                        <h3>Shh, don't tell anybody that I eat a lot. Jaja, I am a food lover.<br>These are my favorite food, you can pick one to try:</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-4 col-sm-10 col-sm-offset-2 col-xs-9 col-xs-offset-3">
+                        <h4>
+    <input type="radio" name="food" value="milk" checked>Milk
+    <input type="radio" name="food" value="bamboo">Bamboo shoots
+    <input type="radio" name="food" value="apple"> Apple
+    <input type="radio" name="food" value="bread">Steamed corn bread
+    </h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-4 col-sm-10 col-sm-offset-2 col-xs-10 col-xs-offset-2">
+                        <div class="img-group">
+                            <img class="pic" alt="milkbottle" src="img/milkbottle.svg">
+                            <img class="pic" alt="bamboo" src="img/bamboo.svg">
+                            <img class="pic" alt="apple" src="img/apple.svg">
+                            <img class="pic" alt="corn" src="img/corn.svg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-3 col-sm-11 col-sm-offset-1 col-xs-11 col-xs-offset-1">
+                        <h3>Em, How's that? Good? You like it?</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pannel">
+                <div class="col-md-1 col-md-offset-1 col-sm-1 col-md-offset-1 col-xs-11 col-xs-offset-1">
+                    <img src="img/laugh.svg" alt="laughpanda" class="allpanda">
+                </div>
+                <div class="col-md-8 col-sm-6 col-xs-11 col-xs-offset-1">
+                    <h3>Jaja, let me show you my home. It's fresh green! My favorite color! <br><br>What's your favourite color?
+    <input type="color" name="favcolor" value="#ff0000" id="color"></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3>Hey, I have a great game. Do you want to play with me?</h3>
+                    <h3><input type="submit" value="Let's Go"></h3>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
+</div>
