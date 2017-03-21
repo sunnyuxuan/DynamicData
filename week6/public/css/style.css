@@ -2,12 +2,9 @@ body{
 background-color: #E6F8B2;
 }
 
-
 .headbg{
 background-color: #CDE77F;
 }
-
-
 
 h1{
 font-family: 'Comfortaa', cursive;
@@ -26,4 +23,18 @@ color: gray;
 
 .pic{
 margin-right:30px;
+}
+
+#mainForm{
+    background-color: white;
+    width: 370px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#mainRes{
+    background-color: white;
+    width: 570px;
+    margin: 0 auto;
+    padding: 20px;
 }

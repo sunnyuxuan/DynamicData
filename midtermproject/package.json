@@ -1,0 +1,25 @@
+{
+  "name": "basicproject",
+  "version": "1.0.0",
+  "description": "code plan: 1: build layout page 2: build templates for changingNeighborhoods, finance and race&property 3: build form page 4: build app.js 5: store data and output data to templates pages",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blipp": "^2.3.0",
+    "form-data": "^2.1.2",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.0.6",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "node-fetch": "^1.6.3",
+    "path": "^0.12.7",
+    "sequelize": "^3.30.2",
+    "sqlite3": "^3.1.8",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {}
+}

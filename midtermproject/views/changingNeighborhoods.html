@@ -1,0 +1,63 @@
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container fornav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="timeline.html">Miami Housing Policy Timeline</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="changingNeighborhoods.html" style="background:#C4CDA9;">Changing Neighborhoods</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                        <li><a href="raceAndProperty.html">Race and Property</a></li>
+                        <li><a href="index.html">Housing Toolkit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<div id="container">
+
+{{#if dbresponse}}
+        {{#all dbresponse}}
+    <!--    Section        -->
+    <div class="row">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-10 col-xs-4 col-xs-offset-8">
+                <h4 class="year">{{Year}}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 col-md-6 col-xs-10">
+                <img src="{{imglink}}" class="story-img">
+                <p class="caption">{{Caption}}</p>
+            </div>
+            <div class="col-md-6">
+                <div class="containter greenright">
+                    <h2 class="Bigtitle">{{Header}}</h2>
+                    <p class="para">{{message}}</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-9 col-md-offset-1 greengap">
+            </div>
+        </div>
+    </div>
+    
+      {{/all}}
+    {{/if}}
+    <!--    Section        -->
+</div>
+
+

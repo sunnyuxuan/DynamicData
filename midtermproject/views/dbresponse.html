@@ -1,0 +1,20 @@
+
+<div id="mainRes">
+
+    {{#if dbresponse}} 
+    {{#all dbresponse}} 
+    {{id}} :  
+    {{Track}} : 
+    {{Year}} :
+    {{Header}} :
+    {{message}} :
+    {{imglink}} :
+    {{Caption}}
+    <a href="/update/{{id}}">update</a> 
+    <a href="/delete/{{id}}">delete</a>
+    <br> 
+    {{/all}} 
+    {{/if}}
+
+</div>
+
