@@ -159,7 +159,7 @@ server.route({
             }
         });
 
-        reply("destroy user");
+        reply().redirect("/displayAll");
     }
 });
 

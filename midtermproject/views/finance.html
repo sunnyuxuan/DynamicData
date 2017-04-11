@@ -35,6 +35,7 @@
                 <h4 class="year">{{Year}}</h4>
             </div>
         </div>
+       {{#if imglink}}
         <div class="row">
             <div class="col-lg-5 col-lg-offset-1 col-md-6 col-xs-10">
                 <img src="{{imglink}}" class="story-img">
@@ -43,11 +44,25 @@
             <div class="col-md-6">
                 <div class="containter greenright">
                     <h2 class="Bigtitle">{{Header}}</h2>
-                     <p class="para">{{message}}</p>
+                    <p class="para">{{message}}</p>
                 </div>
             </div>
 
         </div>
+        {{else}}
+        
+          <div class="row">
+           
+            <div class="col-md-12">
+                <div class="containter greenright">
+                    <h2 class="Bigtitle">{{Header}}</h2>
+                    <p class="para">{{message}}</p>
+                </div>
+            </div>
+
+        </div>
+        
+        {{/if}}
         <div class="row">
             <div class="col-md-9 col-md-offset-1 greengap">
             </div>
