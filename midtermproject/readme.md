@@ -13,7 +13,7 @@ The link of Heroku is https://miamihousingpolicy.herokuapp.com/
 3.After you put all of the content, click the button "Submit", you will see the content styled automatically. 
 ![promisechains](https://cloud.githubusercontent.com/assets/13953268/24925457/5091d138-1ec6-11e7-816f-80c4c99466d9.png)
 
-4. To edit the data and delete the date, go to link: http://localhost:3000/displayAll   You can update the data or delete a data. 
+4. To edit the data and delete the date, go to link:https://miamihousingpolicy.herokuapp.com/displayAll   You can update the data or delete a data. 
 ![promisechains](https://cloud.githubusercontent.com/assets/13953268/24925534/921e3be6-1ec6-11e7-9e4e-3822b0c91b4f.png)
 
 
