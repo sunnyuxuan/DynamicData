@@ -1,4 +1,4 @@
-#Documentation:
+# Documentation: #
 
 ###This is a data entry application designed to assist University of Miami's Office of Civic and Community Engagement to entry Miami Affordable Housing Policy Timeline Story data into a website. 
 
