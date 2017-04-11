@@ -1,6 +1,6 @@
 # Documentation: #
 
-###This is a data entry application designed to assist University of Miami's Office of Civic and Community Engagement to entry Miami Affordable Housing Policy Timeline Story data into a website. 
+### This is a data entry application designed to assist University of Miami's Office of Civic and Community Engagement to entry Miami Affordable Housing Policy Timeline Story data into a website. ###
 
 1.On landing page, you can either create a new timeline story or view all of the data and edit them. 
 ![promisechains](https://cloud.githubusercontent.com/assets/13953268/24924656/86945d12-1ec3-11e7-8193-42658bbab9c2.png)
