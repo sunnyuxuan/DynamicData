@@ -1,0 +1,76 @@
+<div class="row data">
+   <div class="col-lg-8 col-lg-offset-3 col-md-8 col-md-offset-3">
+    <h1 class="formHeader">Miami Housing Policy Timeline Data Entry</h1>
+    </div>
+</div>
+    
+
+    <div id="mainForm">
+
+    <div class="container-fluid">
+        <form action="/form" method="POST">
+
+            <div class="row choose1">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <h4>What's the timeline data type?</h4>
+                <input class="check" type="radio" name="Track" value="Change" checked>Changing Neighborhoods <br>               
+                       <input type="radio" name="Track" value="Finance">Finance<br>
+                       <input type="radio" name="Track" value="Race">Race and Property
+                       </div>
+                      
+            </div>
+
+            <div class="row choose1">
+               <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+                    <h4>Year:</h4>
+                </div>
+                  <div class="col-lg-8 col-md-8"> 
+                    <input type="text" name="Year" id="Year">
+                </div>
+            </div> 
+                 
+            <div class="row choose1">
+               <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+                  <h4>Header:</h4>
+               </div>
+                <div class="col-lg-8 col-md-8"> 
+               <input type="text" name="Header" id="Header">
+               </div>
+            </div> 
+               
+               <div class="row choose1">
+               <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+                <h4>Paragraph:</h4>
+                </div>
+                 <div class="col-lg-8 col-md-8"> 
+                <textarea name="message" rows="10" cols="90" id="message"></textarea>
+                </div>
+            </div>
+                 
+               <div class="row choose1">
+               <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+                  <h4>Img Link in the Sharepoint:</h4>
+                </div>
+                 <div class="col-lg-8 col-md-8">
+                <input type="text" name="imglink" id="imglink">
+                   </div>
+            </div>
+              
+               <div class="row choose1">
+               <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+                <h4>Caption:</h4>
+        </div>
+           <div class="col-lg-8 col-md-8">
+           <input type="text" name="Caption" id="Caption">
+                   </div>
+            </div>
+            
+            <div class="row choose1">
+               <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+             <input type="submit" value="Submit" class="submit">
+             </div>
+            </div>
+            
+        </form>
+    </div>
+</div>

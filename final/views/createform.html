@@ -1,0 +1,52 @@
+<div class="row data">
+   <div class="col-lg-12 col-md-12 col-xs-12">
+    <h1 class="formHeader">Food Compete Machine</h1>
+    </div>
+</div>
+    
+
+    <div id="mainForm">
+
+    <div class="container-fluid">
+        <form action="/form" method="POST">
+
+            <div class="row choose1">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <h4>What kind of food you want to search for?</h4>
+                <input class="check" type="radio" name="Food" value="Sushi" checked>Sushi<br>               
+                       <input type="radio" name="Food" value="Hotpot">Hotpot<br>
+                       <input type="radio" name="Food" value="Curry">Curry
+                       </div>
+                      
+            </div>
+
+            <div class="row choose1">
+               <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+                    <h4>Location:</h4>
+                </div>
+                  <div class="col-lg-8 col-md-8"> 
+                    <input type="text" name="Location" id="Location">
+                </div>
+            </div> 
+                  
+               <div class="row choose1">
+               <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+                <h4>Rating:</h4>
+                <input class="check" type="radio" name="Rate" value="Five" checked>5 stars<br>               
+                       <input type="radio" name="Rate" value="Four">4 stars<br>
+                       <input type="radio" name="Rate" value="Three">3 stars<br>
+                       <input type="radio" name="Rate" value="Two">2 stars<br>
+                       <input type="radio" name="Rate" value="One">1 stars
+                </div>
+                
+            </div>
+            
+            <div class="row choose1">
+               <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+             <input type="submit" value="Submit" class="submit">
+             </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
