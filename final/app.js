@@ -9,8 +9,23 @@ const Handlebars = require('handlebars');
 const fs = require("fs");
 const Sequelize = require('sequelize');
 const pg = require('pg');
-//const Fetch = require("node-fetch");
-//const FormData = require("form-data");
+const Fetch = require("node-fetch");
+const FormData = require("form-data");
+
+var config = require('./config.js');
+
+//yelp
+const yelp = require('yelp-fusion');
+
+var client;
+
+const token = yelp.accessToken(config.clientId, config.clientSecret).then(response => {
+    console.log(response.jsonBody.access_token);
+    client = yelp.client(response.jsonBody.access_token);
+
+}).catch(e => {
+    console.log(e);
+});
 
 const server = new Hapi.Server({
     connections: {
@@ -58,13 +73,17 @@ var User = sequelize.define('user', {
     Food: {
         type: Sequelize.STRING
     },
-    Location: {
+    LocationA: {
+        type: Sequelize.STRING
+    },
+    LocationB: {
         type: Sequelize.STRING
     },
     Rate: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
     }
 });
+
 
 
 server.register([Blipp, Inert, Vision], () => {});
@@ -215,39 +234,39 @@ server.route({
 });
 
 
-server.route({
-    method: 'POST',
-    path: '/form',
-    handler: function (request, reply) {
-        var formresponse = JSON.stringify(request.payload);
-        var parsing = JSON.parse(formresponse);
-
-        //console.log(parsing);
-
-        User.create(parsing).then(function (currentUser) {
-            User.sync();
-            console.log("...syncing");
-            console.log(currentUser);
-            return (currentUser);
-        }).then(function (currentUser) {
-
-                        reply.view('formresponse', {
-                            formresponse: currentUser
-                        });
-
-//            console.log(currentUser.Track);
+//server.route({
+//    method: 'POST',
+//    path: '/form',
+//    handler: function (request, reply) {
+//        var formresponse = JSON.stringify(request.payload);
+//        var parsing = JSON.parse(formresponse);
 //
-//            if (currentUser.Track =="Change") {
-//                reply().redirect("/Change");
-//            }else if(currentUser.Track =="Finance") {
-//               reply().redirect("/Finance");
-//            }else{
-//            reply().redirect("/Race");
-//            }
-
-        });
-    }
-});
+//        //console.log(parsing);
+//
+//        User.create(parsing).then(function (currentUser) {
+//            User.sync();
+//            console.log("...syncing");
+//            console.log(currentUser);
+//            return (currentUser);
+//        }).then(function (currentUser) {
+//
+//            reply.view('formresponse', {
+//                formresponse: currentUser
+//            });
+//
+//            //            console.log(currentUser.Track);
+//            //
+//            //            if (currentUser.Track =="Change") {
+//            //                reply().redirect("/Change");
+//            //            }else if(currentUser.Track =="Finance") {
+//            //               reply().redirect("/Finance");
+//            //            }else{
+//            //            reply().redirect("/Race");
+//            //            }
+//
+//        });
+//    }
+//});
 
 
 
@@ -312,28 +331,98 @@ server.route({
         });
     }
 });
-//
-//server.route({
-//    method: 'GET',
-//    path: '/find/{Year}',
-//    handler: function (request, reply) {
-//        User.findOne({
-//            where: {
-//                Year: encodeURIComponent(request.params.Year),
-//            }
-//        }).then(function (user) {
-//            var currentUser = "";
-//            currentUser = JSON.stringify(user);
-//            //console.log(currentUser);
-//            currentUser = JSON.parse(currentUser);
-//            console.log(currentUser);
-//            reply.view('find', {
-//                dbresponse: currentUser
-//            });
-//
-//        });
-//    }
-//});
+
+server.route({
+    method: 'GET',
+    path: '/form',
+    handler: {
+        view: {
+            template: 'formresponse'
+        }
+    }
+});
+
+server.route({
+    method: 'POST',
+    path: '/form',
+    handler: function (request, reply) {
+
+        //        client.search({
+        //            term: Food,
+        //            location: 'new york, ny',
+        //            sort_by: 'rating'
+        //        }).then(response => {
+        //            console.log(response.jsonBody.businesses);
+        //            
+        //        }).catch(e => {
+        //            console.log(e);
+        //        });
+var Food = request.payload.Food;
+var LocationA = request.payload.LocationA;
+var LocationB = request.payload.LocationB;
+var Rate = request.payload.Rate;
+        
+        
+        client.search({
+            term: Food,
+            location: LocationA,
+            sort_by: "rating"
+        }).then(function (response) {
+            //console.log(response.jsonBody.businesses);
+            
+            //loop and count 5 star restaurants
+            var allbusiness = response.jsonBody.businesses;
+            var loc1count = 0;
+            
+            //var curRate = parseFloat(Rate);
+            //console.log(curRate);
+           
+            for (var x in allbusiness) {
+                
+                if(allbusiness[x]["rating"] > parseFloat(Rate))
+                loc1count++;
+            };
+
+            client.search({
+                term: Food,
+                location: LocationB,
+                sort_by: "rating"
+            }).then(function (response) {
+                //count second location
+            var allbusiness2 = response.jsonBody.businesses;
+            var loc2count = 0;
+           
+            for (var y in allbusiness2) {
+                if(allbusiness2[y]["rating"] > parseFloat(Rate))
+                   loc2count++; 
+            
+            };
+                
+                // log of first location count
+                console.log(loc1count);
+                console.log(loc2count);
+                //render your template
+//                
+    var response = {
+        loc1: LocationA, 
+        loc2: LocationB, 
+        loc1count: loc1count,
+        loc2count: loc2count};
+                
+            reply.view('barchart', {
+                formresponse: response
+            });
+    
+            }).catch(e => {
+                console.log(e);
+            });
+        }).catch(e => {
+                console.log(e);
+            });
+        }
+    });
+
+
 server.start((err) => {
 
     if (err) {
@@ -342,3 +431,4 @@ server.start((err) => {
     console.log(`Server running at: ${server.info.uri}`);
 
 });
+

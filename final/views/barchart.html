@@ -1,0 +1,36 @@
+
+
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script type="text/javascript" src="js/Chart.bundle.min.js"></script>
+
+    <script>
+        
+                var ctx = document.getElementById("myChart");
+
+        
+        var keys = ["{{formresponse.loc1}}","{{formresponse.loc2}}"];
+                var values = [{{formresponse.loc1count}},{{formresponse.loc2count}}];
+        
+         var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: keys,
+                        datasets: [{
+                            label: 'Cities',
+                            data: values
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+          
+
+    </script>
+
