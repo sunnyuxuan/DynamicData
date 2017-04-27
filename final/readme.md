@@ -2,13 +2,13 @@
 
 ### This is an application about comparing the best food in two different cities by using Yelp Api. ###
 
-#1.Idea Behind this project: 
+## 1.Idea Behind this project: ##
 
 Compare a specific food, like sushi, hotpot or BBQ in two different cities, and to see which city has the largest number of restaurants which serving the best food.Users has to input two cities' name first, and then choose a specific food.Lastly,they need choose the rating of the restaurants.Here it is suggested that the higher rating of a restaurant the better quality of the food.
 
 ![promisechains](https://cloud.githubusercontent.com/assets/13953268/25488074/1278a956-2b34-11e7-9b58-e2057b39bff6.png)
 
-#2.About API I used:
+## 2.About API I used: ##
 
 Here I used Yelp <a href="https://www.yelp.com/developers/documentation/v2/search_api">Fusion's Search Api</a>: General search parameters: term, sort(rating), location
 This is a coding example about how to start to use yelp fusion api.<a href="https://github.com/Yelp/yelp-fusion/tree/master/fusion/node">See the example</a>
@@ -21,7 +21,7 @@ This is a coding example about how to start to use yelp fusion api.<a href="http
 
 ![4](https://cloud.githubusercontent.com/assets/13953268/25488611/74bf800c-2b35-11e7-974c-eb9f97d79c07.png)
 
-#3.About Code:
+## 3.About Code:##
 I used Fetch.js to request user input data information and send to app.js, and then the app.js connects to the api and do the math and then send the results back to Fetch, after parsing the result from a string to a object, I can use a function to create barchart.
 
 Code in the createform.html, create a form and build fetch function and create chart function:
