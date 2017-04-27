@@ -106,7 +106,7 @@ server.route({
     path: '/',
     handler: {
         view: {
-            template: 'index'
+            template: 'createform'
         }
     }
 });
@@ -223,99 +223,17 @@ server.route({
 
 });
 
-server.route({
-    method: 'GET',
-    path: '/createform',
-    handler: {
-        view: {
-            template: 'createform'
-        }
-    }
-});
-
-
-//server.route({
-//    method: 'POST',
-//    path: '/form',
-//    handler: function (request, reply) {
-//        var formresponse = JSON.stringify(request.payload);
-//        var parsing = JSON.parse(formresponse);
-//
-//        //console.log(parsing);
-//
-//        User.create(parsing).then(function (currentUser) {
-//            User.sync();
-//            console.log("...syncing");
-//            console.log(currentUser);
-//            return (currentUser);
-//        }).then(function (currentUser) {
-//
-//            reply.view('formresponse', {
-//                formresponse: currentUser
-//            });
-//
-//            //            console.log(currentUser.Track);
-//            //
-//            //            if (currentUser.Track =="Change") {
-//            //                reply().redirect("/Change");
-//            //            }else if(currentUser.Track =="Finance") {
-//            //               reply().redirect("/Finance");
-//            //            }else{
-//            //            reply().redirect("/Race");
-//            //            }
-//
-//        });
-//    }
-//});
-
-
-
-
-
 //server.route({
 //    method: 'GET',
-//    path: '/{Track}',
-//    handler: function (request, reply) {
-//
-//        //get all the data
-//        
-//        //grab track parameter enccodeURI
-//        //where track: params.Track
-//
-//        User.findAll({
-//            where: {
-//                Track: encodeURIComponent(request.params.Track),
-//            },
-//            order: [['Year', 'ASC']],
-//        }).then(function (allUsers) {
-////            console.log("number of items: " + allUsers.length);
-////            reply(allUsers);
-//           
-//            var currentTrack = encodeURIComponent(request.params.Track);
-//            var currentUsers = JSON.stringify(allUsers);
-////            console.log(allUsers.Track);
-////            reply(allUsers.Track);
-//            if(currentTrack=="Change"){
-//            reply.view('changingNeighborhoods', {
-//                dbresponse: currentUsers
-//            })
-//            }
-//            else if(currentTrack=="Finance"){
-//             reply.view('finance', {
-//                dbresponse: currentUsers
-//            })
-//            }
-//            else{
-//            reply.view('raceAndProperty', {
-//                dbresponse: currentUsers
-//            })
-//            }
-//             
-//        });
-//
-//
+//    path: '/createform',
+//    handler: {
+//        view: {
+//            template: 'createform'
+//        }
 //    }
 //});
+
+
 
 server.route({
     method: 'GET',
@@ -347,22 +265,16 @@ server.route({
     path: '/form',
     handler: function (request, reply) {
 
-        //        client.search({
-        //            term: Food,
-        //            location: 'new york, ny',
-        //            sort_by: 'rating'
-        //        }).then(response => {
-        //            console.log(response.jsonBody.businesses);
-        //            
-        //        }).catch(e => {
-        //            console.log(e);
-        //        });
 var Food = request.payload.Food;
 var LocationA = request.payload.LocationA;
 var LocationB = request.payload.LocationB;
 var Rate = request.payload.Rate;
         
-        
+       console.log(Food);
+       console.log(LocationA);
+       console.log(LocationB);
+       
+       
         client.search({
             term: Food,
             location: LocationA,
@@ -407,11 +319,14 @@ var Rate = request.payload.Rate;
         loc1: LocationA, 
         loc2: LocationB, 
         loc1count: loc1count,
-        loc2count: loc2count};
+        loc2count: loc2count
+    };
                 
-            reply.view('barchart', {
-                formresponse: response
-            });
+//            reply.view('barchart',{
+//                formresponse: response
+//            },{layout: 'none'});
+                
+                reply(response);
     
             }).catch(e => {
                 console.log(e);
